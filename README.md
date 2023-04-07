@@ -9,7 +9,7 @@ For more info, check out the [uBlue homepage](https://ublue.it/) and the [main u
 
 You're not me, so you probably want a different set of packages.
 
-See the [Make Your Own -page in the documentation](https://ublue.it/making-your-own/) for quick setup instructions for setting up your own repository based on the upstream template.
+See the [Make Your Own page in the documentation](https://ublue.it/making-your-own/) for quick setup instructions for setting up your own repository based on the upstream template.
 
 Don't worry, it only requires some basic knowledge about using the terminal and git.
 
