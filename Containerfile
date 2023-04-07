@@ -5,7 +5,7 @@ ARG RECIPE
 FROM ${BASE_CONTAINER_URL}:${FEDORA_MAJOR_VERSION}
 
 # copy over configuration files
-COPY etc /etc
+# COPY etc /etc
 # COPY usr /usr
 
 COPY ${RECIPE} /tmp/ublue-recipe.yml
