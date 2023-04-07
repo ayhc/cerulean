@@ -1,11 +1,11 @@
-ARG FEDORA_MAJOR_VERSION=37
-ARG BASE_CONTAINER_URL=ghcr.io/ublue-os/silverblue-main
+ARG FEDORA_MAJOR_VERSION=38
+ARG BASE_CONTAINER_URL=ghcr.io/ublue-os/kinoite-main
 ARG RECIPE
 
 FROM ${BASE_CONTAINER_URL}:${FEDORA_MAJOR_VERSION}
 
 # copy over configuration files
-COPY etc /etc
+# COPY etc /etc
 # COPY usr /usr
 
 COPY ${RECIPE} /tmp/ublue-recipe.yml
