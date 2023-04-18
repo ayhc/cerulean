@@ -5,7 +5,7 @@
 
 This repo generates a customized Fedora Kinoite image, with numerous added (and removed) packages to suit my (ayhc's) personal preferences. You may like the selection of packages. Then again, you might not.
 
-For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/)
+For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/).
 
 ## Building your own
 
