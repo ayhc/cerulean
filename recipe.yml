@@ -69,7 +69,6 @@ rpms:
   - guestfs-tools
   - libvirt-daemon-config-network
   - libvirt-daemon-kvm
-  - libvirt-daemon-system
   - python3-libguestfs
   - qemu-kvm
   - virt-install
