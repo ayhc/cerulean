@@ -18,7 +18,19 @@ description: An opinionated Fedora Kinoite spin using uBlue-os tooling.
 # These rpms will be installed from the fedora repository
 # using rpm-ostree and will be preinstalled in the final image
 rpms:
-  - python3-pip # needed for yafti (the first boot installer)
+  # RPMFusion
+  - mesa-vdpau-drivers-freeworld
+  - gstreamer1-plugin-libav
+  - gstreamer1-plugins-bad-free-extras
+  - gstreamer1-plugins-bad-freeworld
+  - gstreamer1-plugins-ugly
+  - gstreamer1-vaapi
+  - compat-ffmpeg4
+  - dptfxtract
+  - libavcodec-freeworld
+  - zerotier-one
+  # Needed for yafti (the first boot installer)
+  - python3-pip
   # ClamAV and associated packages
   - clamav-freshclam
   - clamd
