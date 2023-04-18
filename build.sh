@@ -1,18 +1,10 @@
 #!/bin/bash
 
-echo "-- Installing RPMs from RPMFusion --"
-# Add packages that are not currently in ublue-os/main/packages.json
-rpm-ostree install \
-    mesa-vdpau-drivers-freeworld \
-    gstreamer1-plugin-libav \
-    gstreamer1-plugins-bad-free-extras \
-    gstreamer1-plugins-bad-freeworld \
-    gstreamer1-plugins-ugly \
-    gstreamer1-vaapi \
-    compat-ffmpeg4 \
-    dptfxtract \
-    libavcodec-freeworld \
-    zerotier-one && \
+echo "-- Installing hotfixes --"
+# Add any necessary hotfixes from Fedora bodhi
+rpm-ostree override replace \
+    # Mesa 23.0.2-1 (as of 18 Apr 2023, still in fc38-testing)
+    https://bodhi.fedoraproject.org/updates/FEDORA-2023-cf02ce1580 && \
 echo "---"
 
 echo "-- Installing RPMs defined in recipe.yml --"
