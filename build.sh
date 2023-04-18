@@ -2,7 +2,7 @@
 
 echo "-- Installing hotfixes --"
 # Add any necessary hotfixes from Fedora bodhi
-rpm-ostree override replace https://bodhi.fedoraproject.org/updates/FEDORA-2023-cf02ce1580
+rpm-ostree override replace https://bodhi.fedoraproject.org/updates/FEDORA-2023-a4c0b02c06 # Mesa 23.0.2-2
 echo "---"
 
 echo "-- Installing RPMs defined in recipe.yml --"
