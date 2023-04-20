@@ -1,9 +1,21 @@
 #!/bin/bash
 
-echo "-- Installing hotfixes --"
-# Add any necessary hotfixes from Fedora bodhi
-rpm-ostree override replace https://bodhi.fedoraproject.org/updates/FEDORA-2023-a4c0b02c06 # Mesa 23.0.2-2
+echo "-- Removing stock codecs and Mesa drivers --"
+rpm-ostree override remove \
+    libpostproc-free \
+    libswscale-free \
+    libavformat-free \
+    libavcodec-free \
+    libswresample-free \
+    libavfilter-free \
+    libavutil-free \
+    mesa-va-drivers
 echo "---"
+
+# echo "-- Installing hotfixes --"
+# Add any necessary hotfixes from Fedora bodhi
+# rpm-ostree override replace https://bodhi.fedoraproject.org/updates/[Foo]
+# echo "---"
 
 echo "-- Installing RPMs defined in recipe.yml --"
 rpm_packages=$(yq '.rpms[]' < /tmp/ublue-recipe.yml)
