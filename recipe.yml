@@ -19,7 +19,9 @@ description: An opinionated Fedora Kinoite spin using uBlue-os tooling.
 # using rpm-ostree and will be preinstalled in the final image
 rpms:
   # RPMFusion
+  - mesa-va-drivers-freeworld
   - mesa-vdpau-drivers-freeworld
+  - ffmpeg
   - gstreamer1-plugin-libav
   - gstreamer1-plugins-bad-free-extras
   - gstreamer1-plugins-bad-freeworld
