@@ -2,11 +2,11 @@
 # If you are looking at this file in your root directory on your computer, editing it does nothing.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: startingpoint
+name: cerulean
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not function properly.
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/kinoite-main
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
@@ -15,7 +15,7 @@ base-image: ghcr.io/ublue-os/silverblue-main
 fedora-version: 38
 
 # This description will be visible in the container metadata.
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: An opinionated spin of Fedora Kinoite 38, based on uBlue tooling.
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -65,13 +65,79 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
+    # RPMFusion
+    - mesa-va-drivers-freeworld
+    - mesa-vdpau-drivers-freeworld
+    - ffmpeg
+    - gstreamer1-plugin-libav
+    - gstreamer1-plugins-bad-free-extras
+    - gstreamer1-plugins-bad-freeworld
+    - gstreamer1-plugins-ugly
+    - gstreamer1-vaapi
+    - compat-ffmpeg4
+    - dptfxtract
+    - libavcodec-freeworld
+    - zerotier-one
+    # ClamAV and associated packages
+    - clamav-freshclam
+    - clamd
+    - clamtk
+    # Fcitx input
+    - fcitx5-chinese-addons
+    - fcitx5-configtool
+    - fcitx5-gtk
+    - fcitx5-qt
+    - fcitx5-table-extra
+    - fcitx5-table-other
+    # Multimedia codecs, etc.
+    - gstreamer1-plugin-openh264
+    - mozilla-openh264
+    - openh264
+    # Network
+    - plasma-nm-fortisslvpn
+    - syncthing
+    # Office programs
+    - libreoffice
+    - libreoffice-kf5
+    - cups-pdf
+    - gimagereader-qt
+    - hunspell-fr
+    - skanpage
+    - tesseract-langpack-chi_sim
+    - tesseract-langpack-chi_tra
+    - tesseract-langpack-fra
+    # System management
+    - igt-gpu-tools
+    - radeontop
+    - kcron
+    - lm_sensors
+    - neofetch
+    - seahorse
+    # Virtualisation (from dnf groupinfo virtualization)
+    - guestfs-tools
+    - libvirt-daemon-config-network
+    - libvirt-daemon-kvm
+    - python3-libguestfs
+    - qemu-kvm
+    - virt-install
+    - virt-manager
+    - virt-top
+    - virt-viewer
+    # Misc
+    - mono-core
+    - squashfs-tools
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
-    # Remove the native firefox (from Fedora) in favor of the Flatpak.
-    - firefox
-    - firefox-langpacks
+    - libpostproc-free
+    - libswscale-free
+    - libavformat-free
+    - libavcodec-free
+    - libswresample-free
+    - libavfilter-free
+    - libavutil-free
+    - mesa-va-drivers
 
 # These Flatpaks will be suggested for install after user login, via the yafti
 # "first boot" GUI. Everything below will be merged into the "yafti.yml" config
@@ -79,11 +145,38 @@ rpm:
 # everything below and directly edit "yafti.yml" to have more control.
 # This is just an example selection.
 flatpaks:
-  - org.mozilla.firefox
+  - ca.hamaluik.Timecop
+  - ch.theologeek.Manuskript
+  - com.authy.Authy
+  - com.borgbase.Vorta
+  - com.discordapp.Discord
+  - com.github.zocker_160.SyncThingy
+  - com.moonlight_stream.Moonlight
+  - com.parsecgaming.parsec
+  - com.skype.Client
+  - com.valvesoftware.Steam
+  - com.wire.WireDesktop
+  - in.srev.guiscrcpy
+  - io.crow_translate.CrowTranslate
+  - io.github.dosbox-staging
+  - io.github.giantpinkrobots.bootqt
+  - io.github.jacalz.rymdport
+  - org.atheme.audacious
+  - org.chromium.Chromium
+  - org.chromium.Chromium.Codecs
+  - org.freeplane.App
+  - org.keepassxc.KeePassXC
   - org.mozilla.Thunderbird
-  - com.mattjakeman.ExtensionManager
-  - org.libreoffice.LibreOffice
-  - org.gnome.DejaDup
-  - org.gustavoperedo.FontDownloader
-  - com.github.tchx84.Flatseal
-  - io.github.celluloid_player.Celluloid
+  - org.prismlauncher.PrismLauncher
+  - org.signal.Signal
+  - org.telegram.desktop
+  - org.telegram.desktop.webview
+  - org.kde.haruna
+  - org.kde.krita
+  - org.kde.krita.Codecs
+  - org.zotero.Zotero
+  - us.zoom.Zoom
+  - org.inkscape.Inkscape
+  - page.codeberg.Imaginer.Imaginer
+  - page.codeberg.JakobDev.jdFlatpakSnapshot
+  - io.github.Bavarder.Bavarder
