@@ -183,3 +183,4 @@ firstboot:
     - page.codeberg.Imaginer.Imaginer
     - page.codeberg.JakobDev.jdFlatpakSnapshot
     - io.github.Bavarder.Bavarder
+    - io.github.vikdevelop.SaveDesktop
