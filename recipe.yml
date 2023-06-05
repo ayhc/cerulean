@@ -65,6 +65,7 @@ rpm:
     # Example:
     # - tilix
     # RPMFusion
+    - intel-media-driver
     - mesa-va-drivers-freeworld
     - mesa-vdpau-drivers-freeworld
     - ffmpeg
@@ -77,6 +78,7 @@ rpm:
     - dptfxtract
     - libavcodec-freeworld
     - zerotier-one
+    - steam-devices
     # ClamAV and associated packages
     - clamav-freshclam
     - clamd
@@ -106,13 +108,16 @@ rpm:
     - tesseract-langpack-chi_tra
     - tesseract-langpack-fra
     # System management
+    - distrobox
     - igt-gpu-tools
     - radeontop
     - kcron
     - lm_sensors
     - neofetch
     - seahorse
+    - libva-utils
     # Virtualisation (from dnf groupinfo virtualization)
+    - libvirt-client
     - guestfs-tools
     - libvirt-daemon-config-network
     - libvirt-daemon-kvm
@@ -161,26 +166,28 @@ firstboot:
     - com.wire.WireDesktop
     - in.srev.guiscrcpy
     - io.crow_translate.CrowTranslate
+    - io.github.Bavarder.Bavarder
     - io.github.dosbox-staging
     - io.github.giantpinkrobots.bootqt
     - io.github.jacalz.rymdport
+    - io.github.shiftey.Desktop # GitHub Desktop
+    - io.github.vikdevelop.SaveDesktop
+    - io.podman_desktop.PodmanDesktop
     - org.atheme.audacious
     - org.chromium.Chromium
     - org.chromium.Chromium.Codecs
     - org.freeplane.App
+    - org.inkscape.Inkscape
+    - org.kde.haruna
+    - org.kde.krita
+    - org.kde.krita.Codecs
     - org.keepassxc.KeePassXC
     - org.mozilla.Thunderbird
     - org.prismlauncher.PrismLauncher
     - org.signal.Signal
     - org.telegram.desktop
     - org.telegram.desktop.webview
-    - org.kde.haruna
-    - org.kde.krita
-    - org.kde.krita.Codecs
     - org.zotero.Zotero
-    - us.zoom.Zoom
-    - org.inkscape.Inkscape
     - page.codeberg.Imaginer.Imaginer
     - page.codeberg.JakobDev.jdFlatpakSnapshot
-    - io.github.Bavarder.Bavarder
-    - io.github.vikdevelop.SaveDesktop
+    - us.zoom.Zoom
